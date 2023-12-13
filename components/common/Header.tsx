@@ -1,12 +1,17 @@
-import React from "react";
-// import ConnectWalletButton from "./ConnectWalletButton";
+import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Loading from "./Loading";
+
 const ConnectWalletButton = dynamic(() => import("./ConnectWalletButton"), {
 	ssr: false,
 });
 
 const Header = () => {
-	return (
+	const [isLoading, setLoading] = useState<boolean>(false);
+
+	return isLoading ? (
+		<Loading />
+	) : (
 		<div className="w-full h-min flex flex-row justify-between pt-[4px] items-center bg-white">
 			<img
 				src="/assets/images/logo.svg"
