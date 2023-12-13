@@ -11,17 +11,12 @@ export function MainLayout({ children }: LayoutProps) {
 		const checkIP = async () => {
 			try {
 				setLoading(true);
-				// const res = await fetch(`https://api.ipify.org/?format=json`);
-				// const dataParsed = await res.json();
-				// const { ip } = dataParsed;
-				const response = await fetch(
-					`https://ipinfo.io/json`
-				);
-				const data = await response.json();
-				console.log("data", data);
-				if (data.country === "JP") {
-					router.push("/deny-access");
-				}
+				// const response = await fetch("http://ip-api.com/json");
+				// const data = await response.json();
+				// console.log("data", data);
+				// if (data.countryCode === "JP") {
+				// 	router.push("/deny-access");
+				// }
 				setLoading(false);
 			} catch (error) {
 				console.log("error", error);
