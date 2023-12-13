@@ -9,5 +9,6 @@ export default NextAuth({
         }),
         // Thêm các provider khác nếu muốn
     ],
+    secret: "LlKq6ZtYbr+hTC073mAmAh9/h2HwMfsFo4hrfCx5mLg=",
     // Cấu hình thêm nếu cần
 })
