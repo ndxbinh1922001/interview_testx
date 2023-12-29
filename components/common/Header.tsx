@@ -8,17 +8,17 @@ const ConnectWalletButton = dynamic(() => import("./ConnectWalletButton"), {
 
 const Header = () => {
 	const [isLoading, setLoading] = useState<boolean>(false);
-
+	const [dropdown, setDrodown] = useState(false);
 	return isLoading ? (
 		<Loading />
 	) : (
-		<div className="w-full h-min flex flex-row justify-between pt-[4px] items-center bg-white">
+		<div className="sm:w-screen w-full h-min flex flex-row justify-between pt-[4px] items-center bg-white">
 			<img
 				src="/assets/images/logo.svg"
 				alt=""
-				className="h-[135px] ml-[36px]"
+				className="lg:h-[135px] lg:ml-[36px] h-[50px]"
 			/>
-			<div className="w-min h-[45px] bg-[#f7bdcc] rounded-[12px] flex flex-row justify-between items-center mr-[12px]">
+			<div className="w-min h-[45px] bg-[#f7bdcc] rounded-[12px] flex flex-row justify-between items-center mr-[12px] max-sm:hidden">
 				<div className="flex flex-row text-[14px] font-semibold text-[#596F78]">
 					<button className="px-[32px] hover:text-white">Products</button>
 					<button className="px-[32px] hover:text-white">Protocols</button>
@@ -36,6 +36,19 @@ const Header = () => {
 					/>
 				</button>
 			</div>
+			{/* <button onClick={} className="ml-[16px] border-[1px] border-solid">
+				dropdown
+				{dropdown && (
+					<div className="flex flex-col">
+						<button className="px-[32px] hover:text-white">Products</button>
+						<button className="px-[32px] hover:text-white">Protocols</button>
+						<button className="px-[32px] hover:text-white">Tokens</button>
+						<button className="px-[32px] hover:text-white min-w-[150px]">
+							Use Cases
+						</button>
+					</div>
+				)}
+			</button> */}
 		</div>
 	);
 };

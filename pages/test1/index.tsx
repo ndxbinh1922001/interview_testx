@@ -7,7 +7,7 @@ import React from "react";
 const Test1 = () => {
 	return (
 		<div className="w-full h-full flex flex-col justify-between">
-			<div className="flex flex-row mt-[10vh] ml-[36px] justify-between">
+			<div className="flex flex-row mt-[10vh] ml-[36px] justify-between max-sm:flex-col">
 				<div className="flex flex-col">
 					<div className="text-white text-[69px] font-normal font-['Helvetica Neue'] leading-[80px] tracking-wider">
 						Explore and Earn
@@ -39,7 +39,7 @@ const Test1 = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-white bg-opacity-50 rounded-2xl border border-white min-h-[17vh] mx-[16px] mt-[10vh] flex flex-row justify-around items-center">
+			<div className="bg-white bg-opacity-50 rounded-2xl border border-white min-h-[17vh] mx-[16px] mt-[10vh] flex flex-row justify-around items-center sm-">
 				<div className="flex flex-col justify-center items-center">
 					<div className="text-center text-[#17344F] text-[49px] font-normal font-['Helvetica Neue']">
 						$1.80B
